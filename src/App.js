@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 function App() {
 const [num,setNum] = useState(0);
-console.log("it render outside the useeffect")
+console.log("independent console msg")
 
 useEffect(() =>{
-  alert("useeffect is called")
+  console.log("UseEffect's console msg")
 })
   
   return (
