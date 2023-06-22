@@ -16,3 +16,6 @@ You may also see any lint errors in the console.
 
 
   ### `This file is created for the notes while learning how to use react`
+
+  `CODE: `
+  ![useEffect](./src/image/useeffect.jpg)
