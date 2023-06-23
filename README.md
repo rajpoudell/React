@@ -46,3 +46,9 @@ You may also see any lint errors in the console.
 ![returning_from_useEffect](./src/image/console-return-from-useEffect.jpg)
 
 *  Here return function inside useEffect is used to clear up the code when the useEffect is being called as shown in the console msg above.
+### In conclusion:
+* The callback function inside useEffect is executed after the initial render and after every subsequent re-render by default. If you want to run the effect only once, you can pass an empty array ([]) as the second parameter. This effectively tells React that the effect has no dependencies,so it doesn't need to re-run.
+
+* If you provide a dependencies array, the effect will only be re-run if any of the dependencies change. React will compare the current dependencies with the previous ones and determine if the effect should run again.
+
+* Inside the effect callback, you can perform any asynchronous or synchronous operations. You can also return a cleanup function, which will be executed before the component is unmounted or re-rendered. The cleanup function is useful for cleaning up any resources, event listeners, or subscriptions created by the effect.
