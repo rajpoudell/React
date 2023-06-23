@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-
+import "./index.css"
 function App() {
 const [num,setNum] = useState(0);
-console.log("independent console msg")
 
-useEffect(() =>{
-  console.log("UseEffect's console msg")
-})
+useEffect(() => {
   
+  console.log("useEffect is render")
+  alert("This is alterd")
+})
   return (
     <div className="App">
-      <div>
-        <button onClick={(e) =>{setNum(num+1)}}>clicked {num}</button>
+      <div className="btn">
+        <button onClick={() =>{setNum(num+1)}}>clicked {num}</button>
       </div>
     </div>
   );
