@@ -6,7 +6,7 @@ const [num,setNum] = useState(0);
 useEffect(() => {
   
   console.log("useEffect is render")
-  alert("This is alterd")
+  alert( `clicked: ${num}`)
 })
   return (
     <div className="App">
