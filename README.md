@@ -52,3 +52,17 @@ You may also see any lint errors in the console.
 * If you provide a dependencies array, the effect will only be re-run if any of the dependencies change. React will compare the current dependencies with the previous ones and determine if the effect should run again.
 
 * Inside the effect callback, you can perform any asynchronous or synchronous operations. You can also return a cleanup function, which will be executed before the component is unmounted or re-rendered. The cleanup function is useful for cleaning up any resources, event listeners, or subscriptions created by the effect.
+
+### Here are some scenarios when you might want to use the useEffect hook:
+
+* Fetching data: When you need to fetch data from an API or perform an asynchronous operation, you can use useEffect to initiate the request and handle the response.
+
+* Subscribing to events: If you need to listen for events like mouse clicks, keyboard input, or scroll events, you can use useEffect to set up event listeners and clean them up when the component unmounts.
+
+* Modifying the DOM: When you need to interact with the DOM directly, such as manipulating elements, changing styles, or adding event listeners, you can use useEffect to perform these operations.
+
+* Setting up timers: If you want to schedule a task to run after a specific interval or at a particular time, you can use useEffect to set up timers, such as setTimeout or setInterval, and clear them when the component unmounts.
+
+* Subscribing to data or state changes: When you want to respond to changes in data or state, you can use useEffect with dependencies. By specifying dependencies, you can trigger the effect whenever the dependencies change.
+
+It's important to note that useEffect runs after every render by default. However, you can provide a dependency array as the second argument to control when the effect should run. This array contains values that the effect depends on, and if any of those values change, the effect will be re-run.
