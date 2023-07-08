@@ -66,3 +66,43 @@ You may also see any lint errors in the console.
 * Subscribing to data or state changes: When you want to respond to changes in data or state, you can use useEffect with dependencies. By specifying dependencies, you can trigger the effect whenever the dependencies change.
 
 It's important to note that useEffect runs after every render by default. However, you can provide a dependency array as the second argument to control when the effect should run. This array contains values that the effect depends on, and if any of those values change, the effect will be re-run.
+
+### useContext
+
+The `useContext` hook in React allows you to access the value of a context in a functional component. Context provides a way to share data between components without having to pass props manually at every level of the component tree.
+
+* To use useContext, you need to follow these steps:
+
+1. Create a context using the React.createContext function. This function returns a context object that consists of two components: Provider and Consumer.
+
+```
+// Create a context
+ const MyContext = React.createContext();
+ ```
+
+2. Wrap the parent component or any ancestor component that wants to share the data with its child components using the Provider component. The Provider component accepts a value prop which specifies the value you want to share.
+
+```
+// Wrap the parent component with the Provider
+<MyContext.Provider value={/* value to be shared */}>
+  {/* Child components */}
+</MyContext.Provider>
+```
+3. In any child component that wants to access the shared value, import the context object and use the useContext hook to access the value.
+
+```
+import React, { useContext } from 'react';
+
+// Inside a child component
+const MyComponent = () => {
+  const contextValue = useContext(MyContext);
+
+  // Use the context value in your component
+  // ...
+};
+```
+* The useContext hook takes the context object as an argument and returns the current value provided by the nearest MyContext.Provider up the component tree. It automatically subscribes the component to context updates, so whenever the value of the context changes, the component will re-render.
+
+* It's important to note that useContext can only be used within the body of a functional component or another custom hook. It cannot be used in regular JavaScript functions or class components. Also, make sure the Provider component is higher up in the component tree than the components that consume the context.
+
+* By using useContext, you can access the shared data without passing props through intermediate components, making your code cleaner and more efficient.
