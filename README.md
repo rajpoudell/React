@@ -106,3 +106,4 @@ const MyComponent = () => {
 * It's important to note that useContext can only be used within the body of a functional component or another custom hook. It cannot be used in regular JavaScript functions or class components. Also, make sure the Provider component is higher up in the component tree than the components that consume the context.
 
 * By using useContext, you can access the shared data without passing props through intermediate components, making your code cleaner and more efficient.
+* By using useContext, you can access the shared data without passing props through intermediate components, making your code cleaner and more efficient.
