@@ -109,7 +109,7 @@ const MyComponent = () => {
 * By using useContext, you can access the shared data without passing props through intermediate components, making your code cleaner and more efficient.
 
 
-### Theories
+### Theories:
 
 `Functional Programming Parts`
 
@@ -122,10 +122,28 @@ const MyComponent = () => {
 3. Return functions from other functions
 
 4. Store functions in data structures: You can store functions in data structures like lists, arrays, or dictionaries. This enables you to create collections of functions and manipulate them in various ways.(source: programmingwithmosh, composing and piping)
-```
-const tranform = compose(wrapInDiv,toLowerCase,trim) #passing function as parameter inside compose
+* Composing: Default behaviour of functions pass as parameter inside function left to righr
+
+* Pipe: Behavior of functions pass as parameter right to left
+
+* Examples of composing and pipe
+
+
+### composing
 
 ```
+const tranform = compose(wrapInDiv,toLowerCase,trim) #passing function as parameter inside compose
+```
+
+
+### pipe
+
+```
+const tranform = pipe(trim,toLowerCase,wrapInDiv) 
+
+```
+
+
 ### Higher order functions
 * Higher-order function is the function that either takes one or more functions as argumentes or returns a function as its result 
 Examples:
