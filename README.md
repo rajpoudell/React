@@ -116,5 +116,43 @@ const MyComponent = () => {
 * First-class function/citizen/object means that functions are treated just like any other data types.
 
 1. Assign function to variable
+
 2. Pass function as argument (This is concept which allows us to write higher-order functions that take function as argument to customize)
-3. 
+
+3. Return functions from other functions
+
+4. Store functions in data structures: You can store functions in data structures like lists, arrays, or dictionaries. This enables you to create collections of functions and manipulate them in various ways.(source: programmingwithmosh, composing and piping)
+```
+const tranform = compose(wrapInDiv,toLowerCase,trim) #passing function as parameter inside compose
+
+```
+### Higher order functions
+* Higher-order function is the function that either takes one or more functions as argumentes or returns a function as its result 
+Examples:
+
+1. map:
+```
+const numbers = [1, 2, 3, 4, 5];
+const squared = numbers.map(x => x * x);
+console.log(squared); // [1, 4, 9, 16, 25]
+
+```
+2. filter:
+```
+const numbers = [1, 2, 3, 4, 5];
+const evens = numbers.filter(x => x % 2 === 0);
+console.log(evens); // [2, 4]
+```
+
+3. forEach:The forEach function takes an array and a callback function as arguments. It iterates over each element of the array and applies the callback function.
+
+```
+const colors = ['red', 'green', 'blue'];
+
+colors.forEach(color => console.log(color));
+// Outputs:
+// red
+// green
+// blue
+
+```
