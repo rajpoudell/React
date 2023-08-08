@@ -107,3 +107,14 @@ const MyComponent = () => {
 
 * By using useContext, you can access the shared data without passing props through intermediate components, making your code cleaner and more efficient.
 * By using useContext, you can access the shared data without passing props through intermediate components, making your code cleaner and more efficient.
+
+
+### Theories
+
+`Functional Programming Parts`
+
+* First-class function/citizen/object means that functions are treated just like any other data types.
+
+1. Assign function to variable
+2. Pass function as argument (This is concept which allows us to write higher-order functions that take function as argument to customize)
+3. 
