@@ -241,3 +241,25 @@ function func(a,b){
   // a and b parameter is the info inside function 
 }
 ```
+
+ # Mutable & Immutable:
+
+* its just the term used to describe if and object's state can be changed after it's created or not.
+
+1. Mutable(objects including arrays and functions): An object is considered mutable if its internal state(values,properties or elements) can be modified after the object is created This means i can change its properties or elements without creating a new object.
+```
+let mutableArray = [1, 2, 3];
+mutableArray.push(4); // Modifies the original array by adding an element
+console.log(mutableArray); // Output: [1, 2, 3, 4]
+
+```
+
+2. Immutable(numbers,strings and booleans): An object is considered immutable if it's internal state connot be changed after it's created. Instead of modifying the object, any operation that appears to modify it actually creates a new object with the desired changes, leaving the original object unchanged.
+
+```
+let immutableString = "Hello";
+let newString = immutableString.concat(", World!"); // Creates a new string by concatenation
+console.log(immutableString); // Output: "Hello"
+console.log(newString); // Output: "Hello, World!"
+
+```
