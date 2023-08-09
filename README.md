@@ -67,7 +67,7 @@ You may also see any lint errors in the console.
 
 It's important to note that useEffect runs after every render by default. However, you can provide a dependency array as the second argument to control when the effect should run. This array contains values that the effect depends on, and if any of those values change, the effect will be re-run.
 
-### useContext
+# useContext
 
 The `useContext` hook in React allows you to access the value of a context in a functional component. Context provides a way to share data between components without having to pass props manually at every level of the component tree.
 
@@ -129,14 +129,14 @@ const MyComponent = () => {
 * Examples of composing and pipe
 
 
-### composing
+### Composing
 
 ```
 const tranform = compose(wrapInDiv,toLowerCase,trim) #passing function as parameter inside compose
 ```
 
 
-### pipe
+### Pipe
 * we cannot pass a string in a pipe function
 
 
@@ -146,7 +146,7 @@ const tranform = pipe(trim,toLowerCase,wrapInDiv)
 ```
 
 
-### Higher order functions
+# Higher order functions
 * Higher-order function is the function that either takes one or more functions as argumentes or returns a function as its result 
 Examples:
 
@@ -176,7 +176,7 @@ colors.forEach(color => console.log(color));
 // blue
 
 ```
-# Currying
+# Currying:
 
 * It's a technique in Js that means function returning function
 ```
