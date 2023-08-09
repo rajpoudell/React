@@ -137,6 +137,8 @@ const tranform = compose(wrapInDiv,toLowerCase,trim) #passing function as parame
 
 
 ### pipe
+* we cannot pass a string in a pipe function
+
 
 ```
 const tranform = pipe(trim,toLowerCase,wrapInDiv) 
@@ -172,5 +174,20 @@ colors.forEach(color => console.log(color));
 // red
 // green
 // blue
+
+```
+# Currying
+
+* It's a technique in Js that means function returning function
+```
+function add(a){
+  return function(b){
+    return +b;
+  }
+}
+
+const add2 =  a => b => a+b;  //(a,b) = a+b
+
+add(1)(5); //add(1,5)
 
 ```
