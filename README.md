@@ -191,3 +191,33 @@ const add2 =  a => b => a+b;  //(a,b) = a+b
 add(1)(5); //add(1,5)
 
 ```
+
+# Pure function: 
+* It's a function that produces the same output for the same given input and doesn't cause any observable side effects 
+ 
+ 1. we cannot use random value  (map.random)
+ 2. we cannot use current date/time 
+ 3. we cannot change global(external state) state like DOM,files,db etc
+
+ Example of Pure Function
+
+ ```
+ function add(a, b) {
+  return a + b;
+}
+
+ ```
+ * It takes argument and perform task without modify any external state and doesn't rely on any external state.
+
+ Example of Not Pure Function
+
+ ```
+ let total = 0;
+function addToTotal(num) {
+  total += num;
+  return total;
+}
+ ```
+ * In this case, addToTotal function is not pure because it modifies the external state `total` everytime it's called, and its output depends not only on its input but also on the current state of total
+
+ `Since they don't have side effect.they are less likely to make bugs or unexpected error behavior in our code.`
