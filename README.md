@@ -221,3 +221,23 @@ function addToTotal(num) {
  * In this case, addToTotal function is not pure because it modifies the external state `total` everytime it's called, and its output depends not only on its input but also on the current state of total
 
  `Since they don't have side effect.they are less likely to make bugs or unexpected error behavior in our code.`
+
+ # Benefits of Pure Functions:
+
+1. Self- documenting: A functions contain all the info inside itself.
+```
+function func(a,b){
+  // a and b parameter is the info inside function 
+}
+```
+2. Easily tastable: Because we are not using global state, it easier for us to test it.
+
+3. Concurrency: 
+
+4. Cacheable: By knowing the output of function func(a,b) with parameter a and b(which is user intake)  we can optimize them by reading it from cache.
+
+```
+function func(a,b){
+  // a and b parameter is the info inside function 
+}
+```
