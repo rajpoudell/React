@@ -246,7 +246,7 @@ function func(a,b){
 
 * its just the term used to describe if and object's state can be changed after it's created or not.
 
-1. Mutable(objects including arrays and functions): An object is considered mutable if its internal state(values,properties or elements) can be modified after the object is created This means i can change its properties or elements without creating a new object.
+1. Mutable(objects including arrays and functions): An object is considered mutable if its internal state(values,properties or elements) can be modified after the object is created This means i can chffange its properties or elements without creating a new object.
 ```
 let mutableArray = [1, 2, 3];
 mutableArray.push(4); // Modifies the original array by adding an element
@@ -263,3 +263,35 @@ console.log(immutableString); // Output: "Hello"
 console.log(newString); // Output: "Hello, World!"
 
 ```
+
+### Updating object:
+
+```
+const person =  {name:"john"};
+const updated = {...person, name:"raj"}; //spread operator ...  
+console.log(updated); //{name:"raj"}
+
+```
+
+* To use  library of js for immutable
+
+`npm i immutable`
+* normal object is wrap by 'map()' function
+
+* 'get()' is used to get the element inside object
+```
+import {Map} from 'immutable'
+let book = Map({title:"Harry potter"});
+console.log(book.get("title"))
+```
+
+
+* for the result in console just like plain js we need to use toJS()
+
+
+```
+import {Map} from 'immutable'
+let book = Map({title:"Harry potter"});
+console.log(book.toJS()) //{title:"Harry potter"}
+```
+
