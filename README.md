@@ -292,6 +292,7 @@ console.log(book.get("title"))
 ```
 import {Map} from 'immutable'
 let book = Map({title:"Harry potter"});
-console.log(book.toJS()) //{title:"Harry potter"}
+
+console.log(book.toJS()) //{title:"Harry potter"} which is plain js
 ```
 
