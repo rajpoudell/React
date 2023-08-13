@@ -108,7 +108,33 @@ const MyComponent = () => {
 * By using useContext, you can access the shared data without passing props through intermediate components, making your code cleaner and more efficient.
 * By using useContext, you can access the shared data without passing props through intermediate components, making your code cleaner and more efficient.
 
+# useRef
+* In React, the useRef hook is a built-in hook that allows you to create a mutable reference to an element or a value. Unlike the useState hook, using useRef doesn't trigger a re-render when the value it holds changes. It's commonly used to access and manipulate DOM elements directly, manage focus, or store values that persist across renders without causing re-renders.
+```
+import React, { useRef } from 'react';
 
+function MyComponent() {
+  // Creating a ref for a DOM element
+  const myElementRef = useRef(null);
+
+  // Creating a ref for a value
+  const countRef = useRef(0);
+
+  const incrementCount = () => {
+    countRef.current += 1;
+    console.log("Count:", countRef.current);
+  };
+
+  return (
+    <div>
+      <div ref={myElementRef}>This is a DOM element</div>
+      <button onClick={incrementCount}>Increment Count</button>
+    </div>
+  );
+}
+
+
+```
 ### Theories:
 
 `Functional Programming Parts`
