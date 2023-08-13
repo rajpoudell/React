@@ -135,6 +135,9 @@ function MyComponent() {
 
 
 ```
+
+* In this example, the myElementRef ref is used to reference a DOM element, and the countRef ref is used to store a value that persists across renders.
+* Also note that while useRef can be used to access and manipulate DOM elements, it's generally recommended to use React's state management and props system to handle changes in your application's UI. Using useRef for DOM manipulation should be reserved for cases where it's necessary to interact with the DOM directly, such as managing focus or measuring element dimensions.
 ### Theories:
 
 `Functional Programming Parts`
