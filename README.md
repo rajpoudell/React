@@ -325,3 +325,5 @@ let book = Map({title:"Harry potter"});
 console.log(book.toJS()) //{title:"Harry potter"} which is plain js
 ```
 
+# React-Redux (Global State Management)
+Note: Pushing data from react to redux ---> useDispatch(). Pull the data from the Store to react component, useSelector(). We need to create slice, plug it into the store, take that store and wrap it APP.js with Provider from react-redux.
